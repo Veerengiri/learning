@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway Learning P1</title>
+    <base href="http://localhost:5500">
+    <link rel="icon" type="image/x-icon" href="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png">
+    
+    <!-- the script will be executed while the page continues the parsing -->
+    <script src="demo_async.js" async></script> 
+
+    <!-- when page is finish parsing script is exicuted -->
+    <script src="demo_defer.js" defer></script>
+
+    <!-- The script is fetched and executed immediately, before the browser continues parsing the page -->
+    <script src="demo.js" ></script>
+
+    <!-- Two different style sheets for two different media types (screen and print): -->
+    <link rel="stylesheet" type="text/css" href="theme.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+</head>
+<body>
+    <marquee>Gateway Learning Phase 1</marquee>
+    <abbr title="Veerengiri Goswami">VG</abbr>
+    <details>
+        <summary style="cursor: pointer;">Some Important Tags</summary>
+        <pre> 
+            Pre: Shows text as it formate in editor
+            Kbd: <kbd>Virengiri Goswami</kbd> 
+            Symbols: &gt; &lt; &copy; &trade; &sum; 
+            emojis: &#128513;
+
+            Template: hidden <template>This is hiddene part of the document and use by js</template>
+            bdi: bi directions <bdi>jdoe</bdi>
+            cite: <cite>The Scream</cite> by Edward Munch. Painted in 1893.
+            em: You <em>have</em> to hurry up!
+
+            meter: <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter>
+            progress: <progress id="file" value="32" max="100"> </progress>
+            q: <q>Build a future where people live in harmony with nature.</q> 
+            ruby: <ruby>漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp></ruby>
+
+            s: <s> Only 50 tickets left!</s> SOLD OUT!
+            del ins: My favorite color is <del>blue</del> <ins>red</ins>!
+            wbr: To learn AJAX, you must be familiar with the XML<wbr>Http<wbr>Request Object.
+            mark: Do not forget to buy <mark>milk</mark> today.
+
+            DialogBox: <dialog open>This is an open dialog window</dialog> 
+
+
+        </pre>
+        Figcaption: <figure>
+            <img src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="Trulli">
+            <figcaption>Fig.1 - Gateway Logo</figcaption>
+        </figure> 
+        blockquote: <blockquote cite="http://www.worldwildlife.org/who/index.html">For 50 years, WWF has been protecting the future of nature. </blockquote>
+    </details> <br>
+
+    <form enctype="multipart/form-data"><fieldset>
+        <legend>Form Tags: </legend>
+        <input autofocus list="browsers" placeholder="Choose browser" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist><br><br>
+
+        <label for="cars">Choose a car:</label>
+        <select  name="cars" id="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+    </fieldset></form>
+    
+    <object data="horse.wav">
+        <param name="autoplay" value="true">
+    </object><br><br>
+
+    <details>
+        <summary>Attributes</summary>
+        <pre>
+            accessKey (alt+b): <a href="https://linkedin.com/in/virengiri-goswami" target="_blank" accesskey="b">Profile</a>
+            contentEditable: <span contenteditable="true" >This content is editable</span>
+            download: <a href="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" download>Logo</a>
+            dir: <p dir="rtl">Right to left direction</p>
+            dragable: <span draggable='true'>this text is dragable</span>
+            enterkeyhint(phone): <input type="text" placeholder="show search instead of enter" enterkeyhint="search">
+            hidden:  text is hidden<span hidden> hi there!</span>
+            hreflang: specify the language of link document <a href="https://google.com" hreflang="en">Google</a>
+            
+            
+            inert: <span inert>Browser ignore this line</span>
+            inputmode(phone): <input type="text" placeholder="only shows numeric keyboard" inputmode="numeric">
+            media: used for diffrent puspose <a href="https://yahoo.com" media="print and (resolution:300dpi)">specify that the target URL is designed for special devices (like iPhone) , speech or print media.</a>
+            
+            
+            multiple: used to select multiple items <select multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+            novalidate: <form novalidate>
+                <input type="email" placeholder="form is not be validated"><input type="submit">
+            </form>
+        </pre>
+    </details>
+
+    <details ontoggle="alert('want to see details?')">
+        <summary>Event Attributes</summary>
+        <pre>
+            onaboart: script runs after media abort <img src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" height="20px" onabort="alert('Image load aborted')">
+            onbeforeprint: <i>runs function before printing in body tag</i>
+            onafterprint: <i>runs function aftere printing in body tag </i>
+            onbeforunload: <i>runs function after unload page in body tag </i>
+
+            onblur: <input type="text" placeholder="don't leave it once start!" onblur="alert('you are not on in text box')">
+            oncontextmenu: <b style="cursor: pointer;" oncontextmenu="alert('context menu open')">Right click it</b>
+            oncopy: <span oncopy="alert('copy?')">Copy this</span>
+            ondblclick: <button ondblclick="alert('dbl click')">Double click it </button>
+
+            oninvalidate: <form>
+                Name: <input type="text" oninvalid="alert('You must fill out the form!');" name="fname" required>
+                <input type="submit" value="Submit">
+            </form>
+            onmousewheel: <span onmousewheel="alert('scroll happens')">Scroll here</span>
+
+            onoffline: <i>works on body tag</i>
+            ononline: <i>works on body tag</i>
+            onpagehide: <i>run when a user navigates away from a page works on body tag</i> tab switch
+            onpageshow: <i>run when a user navigates to a page on body tag</i>
+
+            onpaste: <input onpaste="alert('past')" type="text" placeholder="paste here something">
+            onresize: when size of page change event is trigger runs on body
+            ontoggle: toggle this details
+            popover & popovertarget: <button popovertarget="myheader">Click me!</button>
+            <h1 popover id="myheader">Hello</h1>
+            
+            <b>Event fire on source drag</b>
+            ondragstart: <span draggable="true" ondragstart="alert('drag starts')">Drag me!</span>
+            dragend: <span draggable="true" ondragend="alert('drag ends')">Drag me!</span>
+            ondrag (open console): <span draggable="true" ondrag="console.log('draging')">Drag me!</span>
+
+            <b>Event fire on destination drag</b>
+            onleaved: <input type="text"  ondragleave="console.log('element leaved')">put any element here!</input>
+            ondragover: <span ondragover="console.log('element is on the right place')">Put Any element here!</span>
+        </pre>
+    </details>
+
+    <details>
+        <summary>Some other Attributes</summary>
+        <pre>
+            readonly: <textarea readonly cols="150">This text box is only readable</textarea>
+            tabindex: <span tabindex="1">W3Schools</span>
+                      <span tabindex="3">Google</span>
+                      <span tabindex="2">Microsoft</span>
+
+            translate:  <q translate="no">Don't translate this! browser has no permission to traslate this</q>
+            rel: <link rel="stylesheet" type="text/css" href="theme.css"> 
+            sizes: <link rel="icon" href="" type="image/gif" sizes="16x16">
+            reversed: show reversed list <ol reversed>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+            spellcheck: <input type="text" spellcheck="true">
+
+            sandbox: <b>enables an extra set of restrictions for the content in an iframe. </b>
+            with sandbox():  <iframe sandbox width="500" height="312" src="https://www.youtube.com/embed/_70AVhLw43Q" title="theinfinity #developer #mernstack #fullstack #react #frontend" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            without sandbox: <iframe  width="500" height="312" src="https://www.youtube.com/embed/_70AVhLw43Q" title="theinfinity #developer #mernstack #fullstack #react #frontend" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                             
+                             <b>if srcdoc is present than it's ignore src in iframe</b>
+            srcdoc:          <iframe srcdoc="<p>this is srcdoc</p>" ></iframe>
+            
+        </pre>
+    </details>
+
+</body>
+</html>
