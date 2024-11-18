@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gsap.min.js"></script>
+    <script src="Draggable.min.js"></script>
+    <script src="InertiaPlugin.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .wheel {
+            width: 50vmin;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: repeating-conic-gradient(white 0 45deg, black 45deg 90deg);
+        }
+
+        .ticker {
+            position: absolute;
+            top: -2.5vmin;
+            left: 50%;
+            height: 5vmin;
+            width: 1vmin;
+            background: grey;
+            z-index: 2;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div class="container">
+        <span style="color: white;" id="showsecno">E-commerse</span>
+        <div style="visibility: hidden;" class="ticker"></div>
+        <div class="wheel"></div>
+    </div>
+     <script>
+        var transformer = gsap.utils.pipe(
+            gsap.utils.wrap(0, 360),
+            gsap.utils.mapRange(0, 360, 0, 1)
+        );
+
+        let numOfSections = 8;
+        let degrees = 360 / numOfSections;
+        const options= ['Digital Marketing','E-commerce','Outdoor Marketing','Electronic Media','Production Studio','Print','About us','Creative']
+        Draggable.create(".wheel", {
+            type: "rotation",
+            inertia: true,
+            snap: function (endValue) {
+                return Math.round(endValue / degrees) * degrees;
+            },
+            throwResistance: 2000,
+            maxDuration: 6,
+            onThrowUpdate: function () {
+                let progress = Math.abs(Math.round((this.rotation % 360)));
+                ticker.totalProgress(transformer(progress));
+                let vel = Math.abs(InertiaPlugin.getVelocity(this.target, "rotation"));
+                // console.log(progress, " rotation ",vel," velocity");
+                vel < 0.1 ? showsection(Math.round(progress/45)): console.log('roteting');
+            },
+        });
+        function showsection(secNo){
+            document.getElementById('showsecno').innerHTML=options[secNo];
+        }
+        let ticker = gsap.to('.ticker', {
+            transformOrigin: 'top center',
+            keyframes: {
+                rotation: [-40, 0, 0, 0],
+            },
+            repeat: numOfSections - 1,
+            paused: true,
+        })
+    </script>
+</body>
+
+</html>
