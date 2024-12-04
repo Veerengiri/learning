@@ -7,10 +7,9 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 
-<body class="">
+<body class="container" data-bs-theme="dark">
     <div class="container bg-dark p-4">
         <span class="mark">mark</span>
         <p class="blockquote bg-warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ad eos
@@ -50,9 +49,12 @@
                 </tr>
             </tbody>
         </table>
-        <img class="rounded-circle float-start" src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
-        <img class="img-thumbnail float-end " src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
-        <img class="rounded m-auto d-block" src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
+        <img class="rounded-circle float-start"
+            src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
+        <img class="img-thumbnail float-end "
+            src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
+        <img class="rounded m-auto d-block"
+            src="https://assets.techreviewer.co/uploads/company/image/1847/The_Gateway_Corp.png" alt="">
         <div class="alert alert-success">
             <strong>Success!</strong> Indicates a successful or positive action.
         </div>
@@ -89,22 +91,22 @@
 
         <!-- Loader button -->
         <button class="btn btn-primary">
-        <span class="spinner-border spinner-border-sm"></span>
+            <span class="spinner-border spinner-border-sm"></span>
         </button>
 
         <button class="btn btn-primary">
-        <span class="spinner-border spinner-border-sm"></span>
-        Loading..
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
         </button>
 
         <button class="btn btn-primary" disabled>
-        <span class="spinner-border spinner-border-sm"></span>
-        Loading..
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
         </button>
 
         <button class="btn btn-primary" disabled>
-        <span class="spinner-grow spinner-grow-sm"></span>
-        Loading..
+            <span class="spinner-grow spinner-grow-sm"></span>
+            Loading..
         </button>
 
         <div class="btn-group">
@@ -123,7 +125,7 @@
         <span class="badge rounded-pill bg-success">badge</span>
     </div>
     <br>
-    <div class="container bg-dark p-4" >
+    <div class="container bg-dark p-4">
         <div class="progress">
             <div class="progress-bar" style="width:70%;">70%</div>
         </div><br>
@@ -145,13 +147,152 @@
             </div>
         </div>
     </div>
+    <div class="container p-4">
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-grow text-warning"></div>
+        <div class="spinner-grow text-danger"></div>
+    </div>
+
+    <div class="container d-flex flex-row gap-5">
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">Veerengiri Goswami</h4>
+                <p class="card-text">This is Veerengiri Goswami. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Minus quisquam facilis amet distinctio, libero sunt exercitationem consequuntur! Sed vel,
+                    repellendus delectus similique nobis in iusto aliquam quidem accusantium facilis eum?</p>
+                <a href="https://linkedin.com/in/virengiri-goswami" target="_blank" class="btn btn-primary">See
+                    Profile</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+            <div class="card-img-overlay">
+                <h4 class="card-title">Veerengiri Goswami</h4>
+                <p class="card-text">This is Veerengiri Goswami. Lorem ipsum, dolor sit amet consectetur adipisicing
+                    elit. Tempore odio repellendus cum vel molestias obcaecati voluptatem, perspiciatis cupiditate! Ex
+                    laboriosam iste esse voluptatibus. Soluta enim eum, officiis tempora nemo harum!</p>
+                <a href="https://linkedin.com/in/virengiri-goswami" target="_blank" class="btn btn-primary">See
+                    Profile</a>
+            </div>
+        </div>
+        <div>
+            <div class="dropdown ">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </div><br>
+            <div class="dropdown dropstart">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </div><br>
+            <ul class="pagination pagination-md container">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- FLOATING IN BOOTSTRAP -->
+    <div class="clearfix container">
+        <span class="float-start">Right Floating </span>
+        <span class="float-end">Float Floating</span>
+        <div class="float-sm-end">Float right on small screens or wider</div><br>
+        <div class="float-md-end">Float right on medium screens or wider</div><br>
+        <div class="float-lg-end">Float right on large screens or wider</div><br>
+        <div class="float-xl-end">Float right on extra large screens or wider</div><br>
+        <div class="float-none">Float none</div>
+        <!-- mid * (sm,md,lg) suggest that property apply to the sm size or from it's wider size -->
+    </div><br><br>
+    <!-- RATIO IN BOOTSTRAP -->
+    <div class="scale-10">
+        <div class="ratio ratio-16x9 border">
+            <div>16X9</div>
+        </div>
+        <div class="ratio ratio-1x1 border">
+            <div>1x1</div>
+        </div>
+        <div class="ratio ratio-4x3 border">
+            <div>4X3</div>
+        </div>
+        <div class="ratio ratio-4x3 border">
+            <div>21x9</div>
+        </div>
+    </div>
     <pre>
-    
 
 
 
 
     </pre>
+    <!-- NAVBAR COMPONENTS -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- caurosal can be used in this -->
+    <!-- MODALS -->
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open modal
+    </button>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
