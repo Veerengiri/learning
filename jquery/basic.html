@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#jq").text("writen by jquery");
+            $("#jq").css("color","red");
+            $("span").hide();
+            $('#button1').click(function(){
+                $("#jq").append("<h5>Button Clicked</h5>");
+                $('#jq').children().css('background-color',"white");
+            })
+            $('[name="jqname"]').css("background-color",'pink');
+            $('#button1').parent().css('background-color',"gray");
+
+            $('#bold\\.es').fadeOut(4000);
+            $('input').val("by jq");
+
+            $("#slideBtn").click(function () {
+                $("#slideText").slideToggle();
+            });
+
+            $('body').prepend("<b>Prepended</p>");
+            $('input').after("<br><br><b>After input</b><br><br>");
+
+            const clone = $('.replaceit').clone()
+            $('.replaceit').replaceWith('<b>Replaced</b>')
+            $('#jq').after(clone)
+        })
+    </script>
+    <script>
+        $.ajax({
+            url: "https://api.example.com/data",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+        $.get("url", function (data) {
+            console.log(data);
+        }); 
+        // $.getJSON("data.json", function (data) {
+        //     console.log(data);
+        // });
+        // $.post("submit.php", { name: "John" }, function (response) {
+        //     alert(response);
+        // });
+        // $("#content").load("file.html");
+    </script>
+</head>
+<body>
+    <h1>Yes It's ready Now</h1>
+    <button id="button1">Click Me!</button>
+    <p id="jq">Write here</p>
+    <span>Hidden</span>
+    <h1 name="jqname">select by name</h1>
+
+    <b id="bold.es">Bold escape</b>
+    <input type="text" value="">
+
+    <button id="slideBtn">Slide Effect</button>
+    <p id="slideText" style="display: none;">Sliding paragraph content.</p>
+    <p class="replaceit">this is going to be replace</p>
+</body>
+</html>
